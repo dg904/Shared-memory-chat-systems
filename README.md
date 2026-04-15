@@ -1,4 +1,4 @@
-# 💬 Shared Memory Chat
+# 💬 Shared Memory Chat System
 
 A simple terminal-based chat application built in C using **shared memory**, **semaphores**, and **signals** for inter-process communication (IPC). Multiple clients can connect to a single server and chat in real time — all without using sockets or networking.
 
