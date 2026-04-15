@@ -4,6 +4,7 @@ A simple terminal-based chat application built in C using **shared memory**, **s
 
 Built as a learning project to understand how processes communicate through shared memory on Linux.
 
+#Contributors - Debabrata Goswami,Atim Kumar Sasmal.
 ---
 
 ## 🧠 How It Works
