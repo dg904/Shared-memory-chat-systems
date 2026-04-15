@@ -1,0 +1,21 @@
+CC      = gcc
+CFLAGS  = -Wall -Wextra -g
+LDFLAGS = -lpthread -lrt
+
+all: server client
+
+server: server.c common.h
+	$(CC) $(CFLAGS) -o server server.c $(LDFLAGS)
+
+client: client.c common.h
+	$(CC) $(CFLAGS) -o client client.c $(LDFLAGS)
+
+clean:
+	rm -f server client
+
+purge:
+	rm -f /dev/shm/sem.chat_mutex /dev/shm/sem.chat_msg
+	ipcrm -M 0x1234 2>/dev/null || true
+	@echo "IPC resources cleaned."
+
+.PHONY: all clean purge
